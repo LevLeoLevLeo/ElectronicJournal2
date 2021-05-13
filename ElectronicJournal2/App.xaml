@@ -1,0 +1,159 @@
+﻿<Application x:Class="ElectronicJournal2.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:ElectronicJournal2"
+             StartupUri="MainWindow.xaml">
+    
+    <Application.Resources>
+
+        <!--#region StackPanels-->
+        
+        <Style TargetType="StackPanel" x:Key="StpHorVerCen">
+
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+
+        </Style>
+
+        <Style TargetType="StackPanel"  x:Key="StpOrienHor">
+
+            <Setter Property="Orientation" Value="Horizontal"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="0 10 0 0"/>
+
+        </Style>
+
+        <!--#endregion-->
+        
+        <!--#region TextBlocks-->
+
+        <Style TargetType="TextBlock" x:Key="TxbDefault">
+
+            <Setter Property="FontSize" Value="20pt"/>
+            <Setter Property="Foreground" Value="#ef423b"/>
+
+        </Style>
+        
+        <!--#endregion-->
+        
+        <!--#region TextBoxes-->
+
+        <Style TargetType="TextBox">
+
+            <Setter Property="FontSize" Value="12pt"/>
+            <Setter Property="MaxLength" Value="50"/>
+            <Setter Property="Width" Value="220px"/>
+            <Setter Property="Margin" Value="10 0 0 0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+
+        </Style>
+
+        <Style TargetType="PasswordBox">
+
+            <Setter Property="FontSize" Value="12pt"/>
+            <Setter Property="MaxLength" Value="30"/>
+            <Setter Property="Width" Value="220px"/>
+            <Setter Property="Margin" Value="10 0 0 0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+
+        </Style>
+
+        <!--#endregion-->
+        
+        <!--#region Buttons-->
+
+        <Style TargetType="Button" x:Key="BtnDefault">
+
+            <Setter Property="Width" Value="80px"/>
+            <Setter Property="Height" Value="40px"/>
+            <Setter Property="Background" Value="#ed423b"/>
+            <Setter Property="Foreground" Value="#FFF"/>
+            <Setter Property="FontSize" Value="15pt"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            
+            <Setter Property="Template">
+            
+                <Setter.Value>
+                    
+                    <ControlTemplate TargetType="{x:Type Button}">
+
+                        <Border Background="{TemplateBinding Background}" BorderBrush="#4b93d4" BorderThickness="0">
+                            
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                       
+                        </Border>
+                    
+                    </ControlTemplate>
+               
+                </Setter.Value>
+           
+            </Setter>
+            
+            <Style.Triggers>
+                
+                <Trigger Property="IsMouseOver" Value="True">
+                
+                    <Setter Property="Background" Value="#ad312b"/>
+               
+                </Trigger>
+
+                <Trigger Property="IsPressed" Value="True">
+
+                    <Setter Property="Background" Value="#0b5496"/>
+
+                </Trigger>
+           
+            </Style.Triggers>
+
+        </Style>
+
+        <Style TargetType="Button" BasedOn="{StaticResource BtnDefault}" x:Key="BtnBack">
+
+            <Setter Property="Content" Value="Назад"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="10 10 0 0"/>
+
+        </Style>
+
+        <Style TargetType="Button" BasedOn="{StaticResource BtnDefault}" x:Key="BtnClose">
+
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+            <Setter Property="HorizontalAlignment" Value="Right"/>
+            <Setter Property="Margin" Value="0 0 10 10"/>
+            <Setter Property="Width" Value="100px"/>
+            <Setter Property="Content" Value="Закрыть"/>
+
+        </Style>
+
+        <Style TargetType="Button" BasedOn="{StaticResource BtnDefault}" x:Key="BtnMainProfileMenu">
+
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontSize" Value="20pt"/>
+            <Setter Property="Height" Value="80"/>
+            <Setter Property="Width" Value="350"/>
+
+        </Style>
+        
+        <!--#endregion-->
+        
+        <!--#region ComboBoxes-->
+
+        <Style TargetType="ComboBox" x:Key="CmbDefault">
+
+            <Setter Property="FontSize" Value="20pt"/>
+            <Setter Property="Width" Value="120px"/>
+            <Setter Property="Margin" Value="10 0 0 0"/>
+            <Setter Property="Foreground" Value="#ef4139"/>
+
+        </Style>
+        
+        <!--#endregion-->
+        
+    </Application.Resources>
+
+</Application>
