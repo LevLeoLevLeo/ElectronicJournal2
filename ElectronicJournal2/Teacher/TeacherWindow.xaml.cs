@@ -29,7 +29,7 @@ namespace ElectronicJournal2.Teacher
 
         private void Btn_Back_Click(object sender, RoutedEventArgs e)
         {
-            
+            WindowsFrames.FrmNavPanel.GoBack();
         }
     }
 }
