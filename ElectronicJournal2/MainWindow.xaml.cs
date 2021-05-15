@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -38,6 +37,24 @@ namespace ElectronicJournal2
                 teacherWindow.Show();
                 this.Close();
             }
+        }
+
+        private void Chb_ShowPassword_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (Chb_ShowPassword.IsChecked == true)
+            {
+                TxB_ShowPassword.Text = Pssb_Password.Password;
+                Pssb_Password.Visibility = Visibility.Collapsed;
+                TxB_ShowPassword.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                Pssb_Password.Password = TxB_ShowPassword.Text;
+                TxB_ShowPassword.Visibility = Visibility.Collapsed;
+                Pssb_Password.Visibility = Visibility.Visible;
+            }
+
         }
     }
 }

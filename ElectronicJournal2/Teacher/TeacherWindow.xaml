@@ -16,7 +16,7 @@
 
         </Grid.RowDefinitions>
 
-        <Button Name="Btn_Back" Style="{StaticResource BtnBack}" Click="Btn_Back_Click"/>
+        <Button Name="Btn_Back" Style="{StaticResource BtnBack}" Click="Btn_Back_Click" Visibility="Hidden"/>
 
         <Frame Grid.Row="1" Name="Frm_NavPanel" NavigationUIVisibility="Hidden"/>
 

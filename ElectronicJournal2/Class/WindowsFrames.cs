@@ -10,5 +10,6 @@ namespace ElectronicJournal2.Class
     class WindowsFrames
     {
         public static Frame FrmNavPanel;
+        public static Button BtnGoBack;
     }
 }

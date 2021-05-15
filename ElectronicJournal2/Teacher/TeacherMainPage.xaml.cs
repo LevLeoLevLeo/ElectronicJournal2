@@ -24,6 +24,7 @@ namespace ElectronicJournal2.Teacher
         public TeacherMainPage()
         {
             InitializeComponent();
+
         }
 
         private void Btn_CloseApp_Click(object sender, RoutedEventArgs e)
@@ -39,6 +40,7 @@ namespace ElectronicJournal2.Teacher
         private void Btn_ChoiceJournal_Click(object sender, RoutedEventArgs e)
         {
             WindowsFrames.FrmNavPanel.Navigate(new TeacherChoiceJournal());
+            WindowsFrames.BtnGoBack.Visibility = Visibility.Visible;
         }
     }
 }

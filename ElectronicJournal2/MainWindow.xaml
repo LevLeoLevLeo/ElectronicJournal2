@@ -22,11 +22,21 @@
 
                 <TextBlock Style="{StaticResource TxbDefault}" Text="Пароль:"/>
                 <PasswordBox Name="Pssb_Password"/>
+                <TextBox Name="TxB_ShowPassword" Visibility="Collapsed"/>
 
             </StackPanel>
 
-            <Button Name="Btn_LogIn" Style="{StaticResource BtnDefault}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 10 30 0" Content="Войти" Click="Btn_LogIn_Click"/>
+                <StackPanel Margin="0 -35 -180 0" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    
+                    <CheckBox Name="Chb_ShowPassword" Click="Chb_ShowPassword_Click">
+                    
+                           <TextBlock Text="Показать пароль" Style="{StaticResource TxbDefault}" FontSize="15pt" Margin="0 -7 0 0"/>
+               
+                    </CheckBox>
+                
+                </StackPanel>
 
+            <Button Name="Btn_LogIn" Style="{StaticResource BtnDefault}" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 10 30 0" Content="Войти" Click="Btn_LogIn_Click"/>
         </StackPanel>
 
         <Button Name="Btn_CloseApp" Style="{StaticResource BtnClose}" Click="Btn_CloseApp_Click"/>
