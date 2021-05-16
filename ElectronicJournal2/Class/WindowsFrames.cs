@@ -11,5 +11,6 @@ namespace ElectronicJournal2.Class
     {
         public static Frame FrmNavPanel;
         public static Button BtnGoBack;
+        public static Teacher.TeacherWindow teacherWindow = new Teacher.TeacherWindow();
     }
 }

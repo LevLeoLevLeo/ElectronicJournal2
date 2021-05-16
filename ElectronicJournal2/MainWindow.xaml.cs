@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElectronicJournal2.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,15 +27,14 @@ namespace ElectronicJournal2
 
         private void Btn_CloseApp_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            Application.Current.Shutdown();
         }
 
         private void Btn_LogIn_Click(object sender, RoutedEventArgs e)
         {
             if (Txb_Email.Text == "1")
             {
-                Teacher.TeacherWindow teacherWindow = new Teacher.TeacherWindow();
-                teacherWindow.Show();
+                WindowsFrames.teacherWindow.Show();
                 this.Close();
             }
         }

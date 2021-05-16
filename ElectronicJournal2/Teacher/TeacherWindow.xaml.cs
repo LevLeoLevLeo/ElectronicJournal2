@@ -22,13 +22,14 @@ namespace ElectronicJournal2.Teacher
     {
         public TeacherWindow()
         {
+           
             InitializeComponent();
             WindowsFrames.FrmNavPanel = Frm_NavPanel;
             WindowsFrames.FrmNavPanel.Navigate(new TeacherMainPage());
             WindowsFrames.BtnGoBack = Btn_Back;
-
+            
         }
-
+       
         private void Btn_Back_Click(object sender, RoutedEventArgs e)
         {
             WindowsFrames.FrmNavPanel.GoBack();
