@@ -35,7 +35,7 @@ namespace ElectronicJournal2
             if (Txb_Email.Text == "1")
             {
                 WindowsFrames.teacherWindow.Show();
-                this.Close();
+                Close();
             }
         }
 
@@ -45,12 +45,14 @@ namespace ElectronicJournal2
             if (Chb_ShowPassword.IsChecked == true)
             {
                 TxB_ShowPassword.Text = Pssb_Password.Password;
+                Pssb_Password.Clear();
                 Pssb_Password.Visibility = Visibility.Collapsed;
                 TxB_ShowPassword.Visibility = Visibility.Visible;
             }
             else
             {
                 Pssb_Password.Password = TxB_ShowPassword.Text;
+                TxB_ShowPassword.Clear();
                 TxB_ShowPassword.Visibility = Visibility.Collapsed;
                 Pssb_Password.Visibility = Visibility.Visible;
             }

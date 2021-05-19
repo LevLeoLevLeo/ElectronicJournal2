@@ -55,6 +55,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Administration\PageAdminElectronicJournal.xaml.cs">
+      <DependentUpon>PageAdminElectronicJournal.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\PageAdminMain.xaml.cs">
+      <DependentUpon>PageAdminMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Administration\WindowAdmin.xaml.cs">
+      <DependentUpon>WindowAdmin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Class\WindowsFrames.cs" />
     <Compile Include="Teacher\TeacherChoiceJournal.xaml.cs">
       <DependentUpon>TeacherChoiceJournal.xaml</DependentUpon>
@@ -65,6 +74,18 @@
     <Compile Include="Teacher\TeacherWindow.xaml.cs">
       <DependentUpon>TeacherWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="Administration\PageAdminElectronicJournal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Administration\PageAdminMain.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Administration\WindowAdmin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

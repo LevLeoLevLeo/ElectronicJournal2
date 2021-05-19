@@ -20,3 +20,9 @@ C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\Electron
 C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\ElectronicJournal2.exe
 C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\ElectronicJournal2.pdb
 C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\ElectronicJournal2.csprojAssemblyReference.cache
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\Administration\PageAdminElectronicJournal.g.cs
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\Administration\PageAdminMain.g.cs
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\Administration\WindowAdmin.g.cs
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\Administration\PageAdminElectronicJournal.baml
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\Administration\PageAdminMain.baml
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\Administration\WindowAdmin.baml
