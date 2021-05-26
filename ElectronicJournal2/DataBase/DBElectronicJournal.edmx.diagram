@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1ca7cafed1d44182a97a4945504ea6d3" Name="Diagram1">
+        <EntityTypeShape EntityType="ProjectJournalModel.Discipline" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectJournalModel.Evaluation" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectJournalModel.Group" Width="1.5" PointX="0.75" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectJournalModel.Role" Width="1.5" PointX="1.5" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectJournalModel.Specialization" Width="1.5" PointX="3.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectJournalModel.Student" Width="1.5" PointX="6" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectJournalModel.sysdiagrams" Width="1.5" PointX="3.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ProjectJournalModel.User" Width="1.5" PointX="1.5" PointY="7.875" IsExpanded="true" />
+        <AssociationConnector Association="ProjectJournalModel.FK_Discipline_User" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectJournalModel.FK_Evaluation_Discipline" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectJournalModel.FK_Evaluation_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectJournalModel.FK_Evaluation_Student" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectJournalModel.FK_Student_Group" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectJournalModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="ProjectJournalModel.FK_Student_Specialization" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="ProjectJournalModel.Cousre" Width="1.5" PointX="0.75" PointY="14.25" />
+        <AssociationConnector Association="ProjectJournalModel.FK_Group_Cousre" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

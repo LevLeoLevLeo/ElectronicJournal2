@@ -26,3 +26,12 @@ C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\Administ
 C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\Administration\PageAdminElectronicJournal.baml
 C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\Administration\PageAdminMain.baml
 C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\Administration\WindowAdmin.baml
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\bin\Debug\EntityFramework.dll
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\bin\Debug\EntityFramework.xml
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\ElectronicJournal2_Content.g.cs
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\ElectronicJournal2.csproj.CopyComplete
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\Teacher\PageListEvaluation.g.cs
+C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\Teacher\PageListEvaluation.baml

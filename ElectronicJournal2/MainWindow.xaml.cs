@@ -1,4 +1,6 @@
 ﻿using ElectronicJournal2.Class;
+using ElectronicJournal2.DataBase;
+using ElectronicJournal2.Teacher;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,6 +25,7 @@ namespace ElectronicJournal2
         public MainWindow()
         {
             InitializeComponent();
+            ClassDataBase.DBProjectJournal = new ProjectJournalEntities();
         }
 
         private void Btn_CloseApp_Click(object sender, RoutedEventArgs e)
@@ -32,10 +35,57 @@ namespace ElectronicJournal2
 
         private void Btn_LogIn_Click(object sender, RoutedEventArgs e)
         {
-            if (Txb_Email.Text == "1")
+            try
+
             {
-                WindowsFrames.teacherWindow.Show();
-                Close();
+                var DBLogin = ClassDataBase.DBProjectJournal.User.FirstOrDefault
+                    (Alien => Alien.Email == Txb_Email.Text && Alien.Password == Pssb_Password.Password || Alien.Email == Txb_Email.Text && Alien.Password == TxB_ShowPassword.Text);
+
+                if (DBLogin == null)
+
+                {
+                    Pssb_Password.Clear();
+                    TxB_ShowPassword.Clear();
+                    MessageBox.Show("Email или пароль введены неверно, попробуйте еще раз",
+                        "Авторизация",
+                        MessageBoxButton.OK, MessageBoxImage.Warning);
+
+                }
+
+                else
+
+                {
+
+                    switch (DBLogin.IdRole)
+
+                    {
+
+                        case 1:
+                            TeacherWindow teacherWindow = new TeacherWindow();
+                            teacherWindow.Show();
+                            this.Close();
+                            break;
+                        case 2:
+                            Administration.WindowAdmin windowAdmin = new Administration.WindowAdmin();
+                            windowAdmin.Show();
+                            this.Close();
+                            break;
+                        default:
+                            MessageBox.Show("Что-то пошло не так, попробуйте войти снова.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                            break;
+
+                    }
+
+                }
+
+            }
+
+            catch (Exception error)
+
+            {
+
+                MessageBox.Show("Произошла ошибка " + error.Message.ToString(), "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+
             }
         }
 

@@ -15,25 +15,25 @@
             <StackPanel Style="{StaticResource StpOrienHor}">
 
                 <TextBlock Style="{StaticResource TxbDefault}" Text="Курс:"/>
-                <ComboBox Style="{StaticResource CmbDefault}"/>
+                <ComboBox Style="{StaticResource CmbDefault}" Name="Cmd_Course" SelectionChanged="Cmd_Course_SelectionChanged"/>
 
             </StackPanel>
 
             <StackPanel Style="{StaticResource StpOrienHor}">
 
                 <TextBlock Style="{StaticResource TxbDefault}" Text="Группа:"/>
-                <ComboBox Style="{StaticResource CmbDefault}"/>
+                <ComboBox Style="{StaticResource CmbDefault}" Name="Cmd_Group"/>
 
             </StackPanel>
 
             <StackPanel Style="{StaticResource StpOrienHor}">
 
                 <TextBlock Style="{StaticResource TxbDefault}" Text="Предмет:"/>
-                <ComboBox Style="{StaticResource CmbDefault}"/>
+                <ComboBox Style="{StaticResource CmbDefault}" Name="Cmd_Subject"/>
 
             </StackPanel>
 
-            <Button Style="{StaticResource BtnDefault}" Name="Btn_FollowToJournal" HorizontalAlignment="Right" Margin="0 10 5 0" Width="110px" Content="Перейти"/>
+            <Button Style="{StaticResource BtnDefault}" Name="Btn_FollowToJournal" HorizontalAlignment="Right" Margin="0 10 5 0" Width="110px" Click="Btn_FollowToJournal_Click" Content="Перейти"/>
 
         </StackPanel>
 
