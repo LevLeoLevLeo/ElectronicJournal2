@@ -24,13 +24,13 @@ namespace ElectronicJournal2.Teacher
         {
            
             InitializeComponent();
-            WindowsFrames.FrmNavPanel = Frm_NavPanel;
-            WindowsFrames.FrmNavPanel.Navigate(new TeacherMainPage());
+            WindowsFrames.FrmNavPanel = Frm_NavPanel;                   
+            WindowsFrames.FrmNavPanel.Navigate(new TeacherMainPage());          //Запись Frame в класс, автоматический переход на главную страницу, запись кнопки "Назад" в класс. 
             WindowsFrames.BtnGoBack = Btn_Back;
             
         }
        
-        private void Btn_Back_Click(object sender, RoutedEventArgs e)
+        private void Btn_Back_Click(object sender, RoutedEventArgs e) //Кнопка "Назад".
         {
             WindowsFrames.FrmNavPanel.GoBack();
             if (!WindowsFrames.FrmNavPanel.CanGoBack)

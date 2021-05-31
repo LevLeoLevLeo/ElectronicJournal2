@@ -28,30 +28,26 @@ namespace ElectronicJournal2.Teacher
 
             Cmb_Course.SelectedValuePath = "Id";
             Cmb_Course.DisplayMemberPath = "Course";
-            Cmb_Course.ItemsSource = ClassDataBase.DBProjectJournal.Cousre.ToList();
+            Cmb_Course.ItemsSource = ClassDataBase.DBProjectJournal.Cousre.ToList(); //Заполнение cmb курсов.
 
             Cmb_Group.SelectedValuePath = "Id";
             Cmb_Group.DisplayMemberPath = "NameGroup";
-            Cmb_Group.ItemsSource = ClassDataBase.DBProjectJournal.Group.ToList();
-
-            Cmb_Student.SelectedValuePath = "Id";
-            Cmb_Student.DisplayMemberPath = "Name";
-            Cmb_Student.ItemsSource = ClassDataBase.DBProjectJournal.Student.ToList();
+            Cmb_Group.ItemsSource = ClassDataBase.DBProjectJournal.Group.ToList(); //Заполненение cmb групп.
 
             Cmb_Object.SelectedValuePath = "Id";
             Cmb_Object.DisplayMemberPath = "NameDiscipline";
-            Cmb_Object.ItemsSource = ClassDataBase.DBProjectJournal.Discipline.ToList();
+            Cmb_Object.ItemsSource = ClassDataBase.DBProjectJournal.Discipline.ToList(); //Заполнение cmb дисциплин.
         }
 
-        private void Cmb_Course_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Cmb_Course_SelectionChanged(object sender, SelectionChangedEventArgs e) //Заполнение cmb групп после выбора курса.
         {
             int x = Convert.ToInt32(Cmb_Course.SelectedValue);
             Cmb_Group.ItemsSource = ClassDataBase.DBProjectJournal.Group.Where(y => y.IdCourse == x).ToList();
         }
 
-        private void Btn_AddEvaluation_Click(object sender, RoutedEventArgs e)
+        private void Btn_AddEvaluation_Click(object sender, RoutedEventArgs e) //Нажатие кнопки "Добавить оценку".
         {
-            if (Cmb_Object.SelectedItem == null || Cmb_Group.SelectedItem == null || Cmb_Student.SelectedItem == null || Txb_Evaluation.Text == null)
+            if (Cmb_Object.SelectedItem == null || Cmb_Group.SelectedItem == null || Cmb_Student.SelectedItem == null || Txb_Evaluation.Text == null) //Если какой-либо пункт не выбран.
 
             {
 
@@ -63,7 +59,7 @@ namespace ElectronicJournal2.Teacher
 
             {
 
-                if (Convert.ToInt32(Txb_Evaluation.Text) < 2 || Convert.ToInt32(Txb_Evaluation.Text) > 5)
+                if (Convert.ToInt32(Txb_Evaluation.Text) < 2 || Convert.ToInt32(Txb_Evaluation.Text) > 5) //Если введена некорректная оценка.
 
                 {
 
@@ -77,7 +73,7 @@ namespace ElectronicJournal2.Teacher
 
                     DateTime todayDate = DateTime.Today;
 
-                    Evaluation evaluationobj = new Evaluation()
+                    Evaluation evaluationobj = new Evaluation() //Если все ок, то добавляется информация об оценки в БД.
 
                     {
 
@@ -89,7 +85,7 @@ namespace ElectronicJournal2.Teacher
 
                     };
 
-                    ClassDataBase.DBProjectJournal.Evaluation.Add(evaluationobj);
+                    ClassDataBase.DBProjectJournal.Evaluation.Add(evaluationobj); //Сохранение изменений.
                     ClassDataBase.DBProjectJournal.SaveChanges();
                     MessageBox.Show("Оценка поставлена!", "Оценка", MessageBoxButton.OK, MessageBoxImage.Information);
 
@@ -97,7 +93,7 @@ namespace ElectronicJournal2.Teacher
             }
         }
 
-        private void Cmb_Group_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Cmb_Group_SelectionChanged(object sender, SelectionChangedEventArgs e) //Заполнение студентов после выбора группы.
         {
             int x = Convert.ToInt32(Cmb_Group.SelectedValue);
             Cmb_Student.ItemsSource = ClassDataBase.DBProjectJournal.Student.Where(y => y.IdGroup == x).ToList();

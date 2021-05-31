@@ -26,12 +26,6 @@ namespace ElectronicJournal2.Teacher
             InitializeComponent();
 
             ListEvaluation.ItemsSource = ClassDataBase.DBProjectJournal.Evaluation.Where(y => y.IdGroup == ClassDataBase.SavePathGroup && y.IdDiscipline == ClassDataBase.SavepathDiscipline).ToList();
-        }
-
-        private void Btn_EvaluationAdd_Click(object sender, RoutedEventArgs e)
-        {
-
-            
 
         }
     }

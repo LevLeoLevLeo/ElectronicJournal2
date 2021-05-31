@@ -28,29 +28,29 @@ namespace ElectronicJournal2.Teacher
 
             Cmd_Course.SelectedValuePath = "Id";
             Cmd_Course.DisplayMemberPath = "Course";
-            Cmd_Course.ItemsSource = ClassDataBase.DBProjectJournal.Cousre.ToList();
+            Cmd_Course.ItemsSource = ClassDataBase.DBProjectJournal.Cousre.ToList(); //Заполнение cmb курсов.
             
             Cmd_Group.SelectedValuePath = "Id";
             Cmd_Group.DisplayMemberPath = "NameGroup";
-            Cmd_Group.ItemsSource = ClassDataBase.DBProjectJournal.Group.ToList();
+            Cmd_Group.ItemsSource = ClassDataBase.DBProjectJournal.Group.ToList(); //Заполнение cmb групп.
 
             Cmd_Subject.SelectedValuePath = "Id";
             Cmd_Subject.DisplayMemberPath = "NameDiscipline";
-            Cmd_Subject.ItemsSource = ClassDataBase.DBProjectJournal.Discipline.ToList();
+            Cmd_Subject.ItemsSource = ClassDataBase.DBProjectJournal.Discipline.ToList(); //Заполнение cmb дисциплин.
 
         }
 
-        private void Cmd_Course_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void Cmd_Course_SelectionChanged(object sender, SelectionChangedEventArgs e) //Заполнение cmb групп после выбора курса.
         {
             int x = Convert.ToInt32(Cmd_Course.SelectedValue);
             Cmd_Group.ItemsSource = ClassDataBase.DBProjectJournal.Group.Where(y => y.IdCourse == x).ToList();
 
         }
 
-        private void Btn_FollowToJournal_Click(object sender, RoutedEventArgs e)
+        private void Btn_FollowToJournal_Click(object sender, RoutedEventArgs e) //Переход к электронному журналу.
         {
 
-            if (Cmd_Group.SelectedValuePath == null || Cmd_Subject.SelectedValuePath == null)
+            if (Cmd_Group.SelectedValuePath == null || Cmd_Subject.SelectedValuePath == null) //Если информация где-то не заполнена.
 
             {
 
@@ -58,7 +58,7 @@ namespace ElectronicJournal2.Teacher
 
             }
 
-            else
+            else //Переход в электронный журнал.
 
             {
                 ClassDataBase.SavePathGroup = Convert.ToInt32(Cmd_Group.SelectedValue);

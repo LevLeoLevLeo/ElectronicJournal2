@@ -26,27 +26,27 @@ namespace ElectronicJournal2.Teacher
             InitializeComponent();
         }
 
-        private void Btn_CloseApp_Click(object sender, RoutedEventArgs e)
+        private void Btn_CloseApp_Click(object sender, RoutedEventArgs e) //Завершение работы приложения.
         {
             Application.Current.Shutdown();
         }
 
-        private void Btn_LogOut_Click(object sender, RoutedEventArgs e)
+        private void Btn_LogOut_Click(object sender, RoutedEventArgs e) //Выход из профиля.
         {
 
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
-            WindowsFrames.teacherWindow.Close();
+            WindowsFrames.teacherWindow.Close(); //Эта строчка почему-то не работает.
         
         }
 
-        private void Btn_ChoiceJournal_Click(object sender, RoutedEventArgs e)
+        private void Btn_ChoiceJournal_Click(object sender, RoutedEventArgs e) //Переход на страницу выбора журнала.
         {
             WindowsFrames.FrmNavPanel.Navigate(new TeacherChoiceJournal());
             WindowsFrames.BtnGoBack.Visibility = Visibility.Visible;
         }
 
-        private void Btn_EvaluationAdd_Click(object sender, RoutedEventArgs e)
+        private void Btn_EvaluationAdd_Click(object sender, RoutedEventArgs e) //Переход на страницу добавления оценки.
         {
             WindowsFrames.FrmNavPanel.Navigate(new PafeAddElevation());
             WindowsFrames.BtnGoBack.Visibility = Visibility.Visible;

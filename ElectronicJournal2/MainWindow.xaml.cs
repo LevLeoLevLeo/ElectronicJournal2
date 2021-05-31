@@ -28,20 +28,20 @@ namespace ElectronicJournal2
             ClassDataBase.DBProjectJournal = new ProjectJournalEntities();
         }
 
-        private void Btn_CloseApp_Click(object sender, RoutedEventArgs e)
+        private void Btn_CloseApp_Click(object sender, RoutedEventArgs e) //Завершение приложения.
         {
             Application.Current.Shutdown();
         }
 
-        private void Btn_LogIn_Click(object sender, RoutedEventArgs e)
+        private void Btn_LogIn_Click(object sender, RoutedEventArgs e) //Кнопка "Войти".
         {
-            try
+            try //На случай ошибки.
 
             {
                 var DBLogin = ClassDataBase.DBProjectJournal.User.FirstOrDefault
-                    (Alien => Alien.Email == Txb_Email.Text && Alien.Password == Pssb_Password.Password || Alien.Email == Txb_Email.Text && Alien.Password == TxB_ShowPassword.Text);
+                    (Alien => Alien.Email == Txb_Email.Text && Alien.Password == Pssb_Password.Password || Alien.Email == Txb_Email.Text && Alien.Password == TxB_ShowPassword.Text); //Сравнение введеных данных с имеющейся БД.
 
-                if (DBLogin == null)
+                if (DBLogin == null) //Если введенные данные не совпали с записями в БД.
 
                 {
                     Pssb_Password.Clear();
@@ -56,7 +56,7 @@ namespace ElectronicJournal2
 
                 {
 
-                    switch (DBLogin.IdRole)
+                    switch (DBLogin.IdRole) //Переход на строницу корректной роли.
 
                     {
 
@@ -71,7 +71,7 @@ namespace ElectronicJournal2
                             this.Close();
                             break;
                         default:
-                            MessageBox.Show("Что-то пошло не так, попробуйте войти снова.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                            MessageBox.Show("Что-то пошло не так, попробуйте снова.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                             break;
 
                     }
@@ -80,7 +80,7 @@ namespace ElectronicJournal2
 
             }
 
-            catch (Exception error)
+            catch (Exception error) //Если возникнет ошибка.
 
             {
 
@@ -89,7 +89,7 @@ namespace ElectronicJournal2
             }
         }
 
-        private void Chb_ShowPassword_Click(object sender, RoutedEventArgs e)
+        private void Chb_ShowPassword_Click(object sender, RoutedEventArgs e) //Функция "Показать пароль".
         {
 
             if (Chb_ShowPassword.IsChecked == true)
