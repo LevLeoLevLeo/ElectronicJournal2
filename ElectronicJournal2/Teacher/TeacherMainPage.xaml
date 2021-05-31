@@ -13,6 +13,7 @@
         <StackPanel Style="{StaticResource StpHorVerCen}">
 
             <Button Style="{StaticResource BtnMainProfileMenu}" Content="Электронный журнал" Name="Btn_ChoiceJournal" Click="Btn_ChoiceJournal_Click"/>
+            <Button Style="{StaticResource BtnMainProfileMenu}" Content="Добавить оценку" Name="Btn_EvaluationAdd" Click="Btn_EvaluationAdd_Click" Margin="0 10 0 0"/>
 
         </StackPanel>
 

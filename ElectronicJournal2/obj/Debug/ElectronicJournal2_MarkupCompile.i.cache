@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Debug\
+C:\Users\Гришин\Desktop\ElectronicJournal2-main\ElectronicJournal2\obj\Debug\
 ElectronicJournal2
 none
 false
 DEBUG;TRACE
-C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\App.xaml
-8-304880577
+C:\Users\Гришин\Desktop\ElectronicJournal2-main\ElectronicJournal2\App.xaml
+9355659166
 22012993793
-291040838305
-18575457168
-Administration\PageAdminElectronicJournal.xaml;Administration\PageAdminMain.xaml;Administration\WindowAdmin.xaml;MainWindow.xaml;Teacher\PageListEvaluation.xaml;Teacher\TeacherChoiceJournal.xaml;Teacher\TeacherMainPage.xaml;Teacher\TeacherWindow.xaml;
+30-1926684871
+18-1679174782
+Administration\PageAddStudent.xaml;Administration\PageAdminMain.xaml;Administration\WindowAdmin.xaml;MainWindow.xaml;Teacher\PafeAddElevation.xaml;Teacher\PageListEvaluation.xaml;Teacher\TeacherChoiceJournal.xaml;Teacher\TeacherMainPage.xaml;Teacher\TeacherWindow.xaml;
 
-False
+True
 

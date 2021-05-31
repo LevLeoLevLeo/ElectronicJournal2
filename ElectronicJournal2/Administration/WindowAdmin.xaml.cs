@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElectronicJournal2.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,18 @@ namespace ElectronicJournal2.Administration
         public WindowAdmin()
         {
             InitializeComponent();
+            WindowsFrames.FrmNavPanel = FrmAdminPage;
+            WindowsFrames.FrmNavPanel.Navigate(new PageAdminMain());
+            WindowsFrames.BtnGoBack = Btn_Back;
+        }
+
+        private void Btn_Back_Click(object sender, RoutedEventArgs e)
+        {
+            WindowsFrames.FrmNavPanel.GoBack();
+            if (!WindowsFrames.FrmNavPanel.CanGoBack)
+            {
+                Btn_Back.Visibility = Visibility.Hidden;
+            }
         }
     }
 }

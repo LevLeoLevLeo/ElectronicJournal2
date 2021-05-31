@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\obj\Release\
+C:\Users\Гришин\Desktop\ElectronicJournal2-main\ElectronicJournal2\obj\Release\
 ElectronicJournal2
 none
 false
 TRACE
-C:\Users\LevLeo\Desktop\ElectronicJournal2\ElectronicJournal2\App.xaml
-41372095905
+C:\Users\Гришин\Desktop\ElectronicJournal2-main\ElectronicJournal2\App.xaml
+9355659166
+22012993793
+29-1084325504
+18-1679174782
+Administration\PageAddStudent.xaml;Administration\PageAdminMain.xaml;Administration\WindowAdmin.xaml;MainWindow.xaml;Teacher\PafeAddElevation.xaml;Teacher\PageListEvaluation.xaml;Teacher\TeacherChoiceJournal.xaml;Teacher\TeacherMainPage.xaml;Teacher\TeacherWindow.xaml;
 
-9-536515618
-13-1505183044
-MainWindow.xaml;Teacher\TeacherChoiceJournal.xaml;Teacher\TeacherMainPage.xaml;Teacher\TeacherWindow.xaml;
-
-True
+False
 

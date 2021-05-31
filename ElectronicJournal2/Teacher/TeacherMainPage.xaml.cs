@@ -45,5 +45,11 @@ namespace ElectronicJournal2.Teacher
             WindowsFrames.FrmNavPanel.Navigate(new TeacherChoiceJournal());
             WindowsFrames.BtnGoBack.Visibility = Visibility.Visible;
         }
+
+        private void Btn_EvaluationAdd_Click(object sender, RoutedEventArgs e)
+        {
+            WindowsFrames.FrmNavPanel.Navigate(new PafeAddElevation());
+            WindowsFrames.BtnGoBack.Visibility = Visibility.Visible;
+        }
     }
 }

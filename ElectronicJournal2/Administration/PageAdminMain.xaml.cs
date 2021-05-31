@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElectronicJournal2.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,38 @@ namespace ElectronicJournal2.Administration
         public PageAdminMain()
         {
             InitializeComponent();
+        }
+
+        private void Btn_CloseApp_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Btn_LogOut_Click(object sender, RoutedEventArgs e)
+        {
+
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            WindowsFrames.pageAdmin.Close();
+
+        }
+
+        private void Btn_ChoiceJournal_Click(object sender, RoutedEventArgs e)
+        {
+            WindowsFrames.FrmNavPanel.Navigate(new Teacher.TeacherChoiceJournal());
+            WindowsFrames.BtnGoBack.Visibility = Visibility.Visible;
+        }
+
+        private void Btn_EvaluationAdd_Click(object sender, RoutedEventArgs e)
+        {
+            WindowsFrames.FrmNavPanel.Navigate(new Teacher.PafeAddElevation());
+            WindowsFrames.BtnGoBack.Visibility = Visibility.Visible;
+        }
+
+        private void Btn_StudentAdd_Click(object sender, RoutedEventArgs e)
+        {
+            WindowsFrames.FrmNavPanel.Navigate(new PageAddStudent());
+            WindowsFrames.BtnGoBack.Visibility = Visibility.Visible;
         }
     }
 }

@@ -9,6 +9,17 @@
       Title="PageAdminMain">
 
     <Grid>
-        
+
+        <StackPanel Style="{StaticResource StpHorVerCen}">
+
+            <Button Style="{StaticResource BtnMainProfileMenu}" Content="Электронный журнал" Name="Btn_ChoiceJournal" Click="Btn_ChoiceJournal_Click"/>
+            <Button Style="{StaticResource BtnMainProfileMenu}" Content="Добавить оценку" Name="Btn_EvaluationAdd" Click="Btn_EvaluationAdd_Click" Margin="0 10 0 0"/>
+            <Button Style="{StaticResource BtnMainProfileMenu}" Content="Добавить студента" Name="Btn_StudentAdd" Click="Btn_StudentAdd_Click" Margin="0 10 0 0"/>
+
+        </StackPanel>
+
+        <Button  Style="{StaticResource BtnDefault}" Name="Btn_LogOut" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10 0 0 10" Content="Выход" Click="Btn_LogOut_Click"/>
+        <Button Style="{StaticResource BtnClose}" Name="Btn_CloseApp" Click="Btn_CloseApp_Click"/>
+
     </Grid>
 </Page>

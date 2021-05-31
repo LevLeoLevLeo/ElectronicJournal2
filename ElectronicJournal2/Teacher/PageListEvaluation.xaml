@@ -15,15 +15,8 @@
 
                 <DataGrid.Columns>
 
-                    <DataGridTextColumn Header="ФИО" Binding="{Binding Name}"/>
-                    <DataGridTextColumn Header="Оценка" Binding="{Binding Evaluation.Evaluation1}"/>
-                    <DataGridTemplateColumn Width="*">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Style="{StaticResource BtnDefault}" Content="Поставить оценку" Name="Btn_EvaluationAdd" Click="Btn_EvaluationAdd_Click"/>
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="ФИО" Binding="{Binding Student.Name}"/>
+                    <DataGridTextColumn Header="Оценка" Binding="{Binding Evaluation1}"/>
 
                 </DataGrid.Columns>
 

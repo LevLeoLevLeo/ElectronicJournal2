@@ -5,8 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ElectronicJournal2.Administration"
         mc:Ignorable="d"
-        Title="WindowAdmin" Height="450" Width="800">
+        Title="Электронный журнал" Height="600" Width="800" Icon="../Resource/TitleLogo.png" WindowStartupLocation="CenterOwner">
     <Grid>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="1.5*"/>
+            <RowDefinition Height="10*"/>
+
+        </Grid.RowDefinitions>
+
+        <Frame Name="FrmAdminPage" Grid.Row="1" NavigationUIVisibility="Hidden"/>
+        <Button Name="Btn_Back" Style="{StaticResource BtnBack}" Click="Btn_Back_Click" Visibility="Hidden"/>
         
     </Grid>
 </Window>
