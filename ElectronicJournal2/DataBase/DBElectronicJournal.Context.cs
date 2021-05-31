@@ -27,6 +27,7 @@ namespace ElectronicJournal2.DataBase
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Cousre> Cousre { get; set; }
         public virtual DbSet<Discipline> Discipline { get; set; }
         public virtual DbSet<Evaluation> Evaluation { get; set; }
         public virtual DbSet<Group> Group { get; set; }
@@ -35,7 +36,6 @@ namespace ElectronicJournal2.DataBase
         public virtual DbSet<Student> Student { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<User> User { get; set; }
-        public virtual DbSet<Cousre> Cousre { get; set; }
     
         public virtual int sp_alterdiagram(string diagramname, Nullable<int> owner_id, Nullable<int> version, byte[] definition)
         {

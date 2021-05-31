@@ -30,6 +30,9 @@ namespace ElectronicJournal2.Teacher
 
         private void Btn_EvaluationAdd_Click(object sender, RoutedEventArgs e)
         {
+
+            
+
         }
     }
 }

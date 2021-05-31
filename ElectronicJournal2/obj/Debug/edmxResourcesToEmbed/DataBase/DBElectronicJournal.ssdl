@@ -23,7 +23,8 @@
     <Property Name="IdStudent" Type="int" Nullable="false" />
     <Property Name="IdGroup" Type="int" Nullable="false" />
     <Property Name="IdDiscipline" Type="int" Nullable="false" />
-    <Property Name="Evaluation" Type="int" Nullable="false" />
+    <Property Name="Evaluation" Type="int" />
+    <Property Name="Date" Type="date" Nullable="false" />
   </EntityType>
   <EntityType Name="Group">
     <Key>

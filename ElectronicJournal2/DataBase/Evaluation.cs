@@ -18,7 +18,8 @@ namespace ElectronicJournal2.DataBase
         public int IdStudent { get; set; }
         public int IdGroup { get; set; }
         public int IdDiscipline { get; set; }
-        public int Evaluation1 { get; set; }
+        public Nullable<int> Evaluation1 { get; set; }
+        public System.DateTime Date { get; set; }
     
         public virtual Discipline Discipline { get; set; }
         public virtual Group Group { get; set; }

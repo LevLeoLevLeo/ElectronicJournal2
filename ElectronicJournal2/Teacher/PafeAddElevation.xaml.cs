@@ -75,6 +75,8 @@ namespace ElectronicJournal2.Teacher
 
                 {
 
+                    DateTime todayDate = DateTime.Today;
+
                     Evaluation evaluationobj = new Evaluation()
 
                     {
@@ -83,6 +85,7 @@ namespace ElectronicJournal2.Teacher
                         Student = Cmb_Student.SelectedItem as Student,
                         Group = Cmb_Group.SelectedItem as Group,
                         Evaluation1 = Convert.ToInt32(Txb_Evaluation.Text),
+                        Date = todayDate,
 
                     };
 
