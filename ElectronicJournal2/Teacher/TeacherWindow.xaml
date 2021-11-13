@@ -11,15 +11,18 @@
 
         <Grid.RowDefinitions>
 
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="53*"/>
+            <RowDefinition Height="488*"/>
+            <RowDefinition Height="43*"/>
 
         </Grid.RowDefinitions>
 
-        <Button Name="Btn_Back" Style="{StaticResource BtnBack}" Click="Btn_Back_Click" Visibility="Hidden"/>
+        <Button Name="Btn_Back" Style="{StaticResource BtnBack}" Click="Btn_Back_Click" Visibility="Hidden" Margin="10,12,0,0" VerticalAlignment="Top" Height="40" Width="80"/>
 
-        <Frame Grid.Row="1" Name="Frm_NavPanel" NavigationUIVisibility="Hidden"/>
+        <Frame Name="Frm_NavPanel" NavigationUIVisibility="Hidden" Margin="0,53,0,0" Grid.RowSpan="3" ContentRendered="Frm_NavPanel_ContentRendered"/>
+
+        <Button  Style="{StaticResource BtnDefault}" Height="30px" Name="Btn_LogOut" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 0 0 0" Content="Выход" Click="Btn_LogOut_Click" Grid.Row="2"/>
 
     </Grid>
-    
+
 </Window>

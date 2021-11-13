@@ -17,7 +17,7 @@
 
         </StackPanel>
 
-        <Button  Style="{StaticResource BtnDefault}" Name="Btn_LogOut" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="10 0 0 10" Content="Выход" Click="Btn_LogOut_Click"/>
+        
         <Button Style="{StaticResource BtnClose}" Name="Btn_CloseApp" Click="Btn_CloseApp_Click"/>
 
     </Grid>

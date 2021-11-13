@@ -38,5 +38,26 @@ namespace ElectronicJournal2.Teacher
                 Btn_Back.Visibility = Visibility.Hidden;
             }
         }
+
+        private void Btn_LogOut_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+            MainWindow  mainWindow = new MainWindow();
+            mainWindow.Show();
+        }
+
+        private void Frm_NavPanel_ContentRendered(object sender, EventArgs e)
+        {
+            if (Frm_NavPanel.Content.ToString() != "ElectronicJournal2.Teacher.TeacherMainPage")
+
+            {
+
+                Btn_LogOut.Visibility = Visibility.Collapsed;
+
+            }
+
+            else
+                Btn_LogOut.Visibility = Visibility.Visible;
+        }
     }
 }
